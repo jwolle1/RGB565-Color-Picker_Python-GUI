@@ -29,16 +29,14 @@ def slider_to_565():
     r = scale_r.get()
     g = scale_g.get()
     b = scale_b.get()
-    rgb565 = "#{:04X}".format(r << 11 | g << 5 | b)
-    return rgb565
+    return "#{:04X}".format(r << 11 | g << 5 | b)
 
 
 def slider_to_888():
     r_hex = "{:02x}".format(round(scale_r.get() / 31 * 255))
     g_hex = "{:02x}".format(round(scale_g.get() / 63 * 255))
     b_hex = "{:02x}".format(round(scale_b.get() / 31 * 255))
-    rgb888 = f"#{r_hex}{g_hex}{b_hex}".upper()
-    return rgb888
+    return f"#{r_hex}{g_hex}{b_hex}".upper()
 
 
 def copy_rgb565():
@@ -47,7 +45,6 @@ def copy_rgb565():
     clip.withdraw()
     clip.clipboard_clear()
     clip.clipboard_append(txt)
-    return
 
 
 def copy_rgb888():
@@ -56,7 +53,6 @@ def copy_rgb888():
     clip.withdraw()
     clip.clipboard_clear()
     clip.clipboard_append(txt)
-    return
 
 
 text_font = "Arial"
