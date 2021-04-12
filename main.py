@@ -20,9 +20,11 @@ def update_b(value):
 
 
 def update_final_output():
-    label_color_output.config(bg=slider_to_888())
-    label_rgb565_output.config(text=slider_to_565())
-    label_rgb888_output.config(text=slider_to_888())
+    rgb565 = slider_to_565()
+    rgb888 = slider_to_888()
+    label_color_output.config(bg=rgb888)
+    label_rgb565_output.config(text=rgb565)
+    label_rgb888_output.config(text=rgb888)
 
 
 def slider_to_565():
@@ -33,10 +35,10 @@ def slider_to_565():
 
 
 def slider_to_888():
-    r_hex = "{:02X}".format(round(scale_r.get() / 31 * 255))
-    g_hex = "{:02X}".format(round(scale_g.get() / 63 * 255))
-    b_hex = "{:02X}".format(round(scale_b.get() / 31 * 255))
-    return f"#{r_hex}{g_hex}{b_hex}"
+    r_8bit = "{:02X}".format(round(scale_r.get() / 31 * 255))
+    g_8bit = "{:02X}".format(round(scale_g.get() / 63 * 255))
+    b_8bit = "{:02X}".format(round(scale_b.get() / 31 * 255))
+    return f"#{r_8bit}{g_8bit}{b_8bit}"
 
 
 def copy_rgb565():

@@ -8,4 +8,6 @@ Unlike a lot of online color pickers, this application doesn't find an RGB888 va
 
 Simply drag the red, green, and blue sliders. The GUI generates both RGB565 and RGB888 color codes. There are `Copy` buttons to copy them to your clipboard.
 
+Minimum requirements are Python 3.6 because the script uses f-strings. It has no imports other than `tkinter`.
+
 ![Screenshot](images/rgb-565-888_screenshot.png)
