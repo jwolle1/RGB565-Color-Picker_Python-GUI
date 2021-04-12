@@ -33,10 +33,10 @@ def slider_to_565():
 
 
 def slider_to_888():
-    r_hex = "{:02x}".format(round(scale_r.get() / 31 * 255))
-    g_hex = "{:02x}".format(round(scale_g.get() / 63 * 255))
-    b_hex = "{:02x}".format(round(scale_b.get() / 31 * 255))
-    return f"#{r_hex}{g_hex}{b_hex}".upper()
+    r_hex = "{:02X}".format(round(scale_r.get() / 31 * 255))
+    g_hex = "{:02X}".format(round(scale_g.get() / 63 * 255))
+    b_hex = "{:02X}".format(round(scale_b.get() / 31 * 255))
+    return f"#{r_hex}{g_hex}{b_hex}"
 
 
 def copy_rgb565():
